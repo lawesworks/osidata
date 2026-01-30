@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.6.1.6238" ExportMode="NoUniqueID" PISystem="CSSSQLAF2" Created="2015-06-02T13:00:00.2527772Z" id="bb258b85-9107-4055-b03c-3abc7f34600c" ParentKey="7b0faa35-160d-45ff-83a5-8eff4229515a" ExportedObject="Speed" ExportedType="UOMClass" Identity="UOMClass" PIPersist="186 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{b8ac1265-8ab5-42ec-9a30-2735eba9ffe5}\UOMDatabase\UOMClasses[{bb258b85-9107-4055-b03c-3abc7f34600c}]*CSSSQLAF2\UOMDatabase\UOMClasses[Speed]">
+  <UOMClass>
+    <Name>Speed</Name>
+    <CanonicalUOM>meter per second</CanonicalUOM>
+    <CanonicalAbbr>m/s</CanonicalAbbr>
+    <UOMBaseClass>
+      <Name>Length</Name>
+      <BasePower>1</BasePower>
+    </UOMBaseClass>
+    <UOMBaseClass>
+      <Name>Time</Name>
+      <BasePower>-1</BasePower>
+    </UOMBaseClass>
+  </UOMClass>
+  <UOM>
+    <Name>meter per second</Name>
+    <Abbreviation>m/s</Abbreviation>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>centimeter per second</Name>
+    <Abbreviation>cm/s</Abbreviation>
+    <RefFactor>0.01</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>foot per minute</Name>
+    <Abbreviation>ft/m</Abbreviation>
+    <RefFactor>0.00508</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>foot per hour</Name>
+    <Abbreviation>ft/h</Abbreviation>
+    <RefFormulaFrom>ft/m * 60</RefFormulaFrom>
+    <RefFormulaTo> ft/h/60</RefFormulaTo>
+    <RefUOM>foot per minute</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>foot per second</Name>
+    <Abbreviation>ft/s</Abbreviation>
+    <RefFactor>0.3048</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>inch per second</Name>
+    <Abbreviation>in/s</Abbreviation>
+    <Description>inches per second</Description>
+    <RefFactor>0.0254</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>inch per minute</Name>
+    <Abbreviation>IPM</Abbreviation>
+    <RefFactor>60</RefFactor>
+    <RefUOM>inch per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>International nautical mile per hour</Name>
+    <Abbreviation>kn</Abbreviation>
+    <RefFactor>0.514444444444444</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>kilometer per hour</Name>
+    <Abbreviation>km/h</Abbreviation>
+    <RefFactor>0.277777777777778</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+  <UOM>
+    <Name>mile per hour</Name>
+    <Abbreviation>mph</Abbreviation>
+    <RefFactor>0.44704</RefFactor>
+    <RefUOM>meter per second</RefUOM>
+    <Class>Speed</Class>
+  </UOM>
+</AF>

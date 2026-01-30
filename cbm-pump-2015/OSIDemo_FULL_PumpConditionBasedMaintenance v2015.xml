@@ -1,0 +1,1312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.0.6937" ExportMode="NoUniqueID" PISystem="CSSSQLAF2" Database="GEN_FINAL_FULL_PumpConditionBasedMaintenance" Description="Condition Based Maintenance for Pumps with Asset Based PI" Created="2015-11-04T15:43:04.7020852Z" id="4e800caa-177b-4580-8ea5-6de6f809ce8d" ParentKey="b8ac1265-8ab5-42ec-9a30-2735eba9ffe5" ExportedObject="GEN_FINAL_FULL_PumpConditionBasedMaintenance" ExportedType="AFDatabase" Identity="Database" PIPersist="177 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{b8ac1265-8ab5-42ec-9a30-2735eba9ffe5}\{4e800caa-177b-4580-8ea5-6de6f809ce8d}*CSSSQLAF2\GEN_FINAL_FULL_PumpConditionBasedMaintenance">
+  <AFDatabase>
+    <Name>GEN_FINAL_FULL_PumpConditionBasedMaintenance</Name>
+    <Description>Condition Based Maintenance for Pumps with Asset Based PI</Description>
+    <AFAttributeCategory>
+      <Name>Asset Properties</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Comparison Based Maintenance Information</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Limit Based Maintenance Information</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Maintenance Information</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Process Variables</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Trigger Input</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Usage Based Maintenance Information</Name>
+    </AFAttributeCategory>
+    <AFTable>
+      <Name>OSIDemo_CMMS Data (Maintenance Information)</Name>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_DataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_DataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Serial_x0020_Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Installation_x0020_Date" msdata:DateTimeMode="Local" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_DataSet>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump01</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-06-01T09:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump02</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-05-05T15:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump03</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-01-01T08:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump04</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-09-10T11:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump05</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-04-08T00:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump06</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-04-20T16:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump07</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-08-03T14:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+  <OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+    <Serial_x0020_Number>Pump08</Serial_x0020_Number>
+    <Installation_x0020_Date>2015-07-13T19:00:00+00:00</Installation_x0020_Date>
+  </OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_>
+</OSIDemo_CMMS_x0020_Data_x0020__x0028_Maintenance_x0020_Information_x0029_DataSet></DataTable>
+    </AFTable>
+    <AFTable>
+      <Name>OSIDemo_Pump Manufacturer Information</Name>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Pump_x0020_Manufacturer_x0020_InformationDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Pump_x0020_Manufacturer_x0020_InformationDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Pump_x0020_Manufacturer_x0020_Information">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Product_x0020_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Horsepower_x0020__x0028_BHP_x0029_" type="xs:double" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Pump_x0020_Manufacturer_x0020_InformationDataSet>
+  <OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+    <Manufacturer>Pump-U UP</Manufacturer>
+    <Type>Centrifugal</Type>
+    <Product_x0020_Name>P3000</Product_x0020_Name>
+    <Horsepower_x0020__x0028_BHP_x0029_>25</Horsepower_x0020__x0028_BHP_x0029_>
+  </OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+  <OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+    <Manufacturer>PumpWorld</Manufacturer>
+    <Type>Displacement</Type>
+    <Product_x0020_Name>P3001S</Product_x0020_Name>
+    <Horsepower_x0020__x0028_BHP_x0029_>31</Horsepower_x0020__x0028_BHP_x0029_>
+  </OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+  <OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+    <Manufacturer>PumpsXStream</Manufacturer>
+    <Type>Centrifugal</Type>
+    <Product_x0020_Name>PXS9</Product_x0020_Name>
+    <Horsepower_x0020__x0028_BHP_x0029_>45</Horsepower_x0020__x0028_BHP_x0029_>
+  </OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+  <OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+    <Manufacturer>Get-Pumped</Manufacturer>
+    <Type>Displacement</Type>
+    <Product_x0020_Name>GP500</Product_x0020_Name>
+    <Horsepower_x0020__x0028_BHP_x0029_>36</Horsepower_x0020__x0028_BHP_x0029_>
+  </OSIDemo_Pump_x0020_Manufacturer_x0020_Information>
+</OSIDemo_Pump_x0020_Manufacturer_x0020_InformationDataSet></DataTable>
+      <AFExtendedProperty>
+        <Name>Horsepower (BHP)|UOM</Name>
+        <Value type="String">horsepower</Value>
+      </AFExtendedProperty>
+    </AFTable>
+    <AFEnumerationSet>
+      <Name>Pump Status</Name>
+      <AFEnumerationValue>
+        <Name>OFF</Name>
+        <Value>0</Value>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>ON</Name>
+        <Value>1</Value>
+      </AFEnumerationValue>
+    </AFEnumerationSet>
+    <AFElementTemplate>
+      <Name>Pump</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">Pump Station\Pump01</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>Bearing Temperature</Name>
+        <DefaultUOM>°F</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;ptclassname=base;pointtype=Float32;pointsource=OSIDemo-AFAnalysis</ConfigString>
+        <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.Bearing Temperature.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Calculated Efficiency</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;ptclassname=base;pointtype=Float32;pointsource=OSIDemo-AFAnalysis</ConfigString>
+        <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.Calculated Efficiency.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Current Draw</Name>
+        <DefaultUOM>A</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;ptclassname=base;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;step=1</ConfigString>
+        <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.Current Draw.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Daily Average Bearing Temperature</Name>
+        <DefaultUOM>°F</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Discharge Flow Rate</Name>
+        <DefaultUOM>US gal/min</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;ptclassname=base;pointtype=Float32;pointsource=OSIDemo-AFAnalysis</ConfigString>
+        <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.Discharge Flow Rate.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Horsepower</Name>
+        <DefaultUOM>hp</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT [Horsepower (BHP)] FROM [OSIDemo_Pump Manufacturer Information] WHERE Manufacturer = @Manufacturer</ConfigString>
+        <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Hourly Maximum Discharge Flow Rate</Name>
+        <DefaultUOM>US gal/min</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Installation Date</Name>
+        <Type>DateTime</Type>
+        <Value type="DateTime">2014-01-01T08:00:00Z</Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT [Installation Date] FROM [OSIDemo_CMMS Data (Maintenance Information)] WHERE [Serial Number] = '%Element%'</ConfigString>
+        <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Maintenance Date</Name>
+        <Type>DateTime</Type>
+        <Value type="DateTime">2015-10-10T10:00:00Z</Value>
+        <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Manufacturer</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Number of Starts Since Maintenance</Name>
+        <DefaultUOM>count</DefaultUOM>
+        <Type>Int32</Type>
+        <Value type="Int32">0</Value>
+        <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Pump Status</Name>
+        <Description>On/Off Status PI Tag</Description>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[Pump Status]</TypeQualifier>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;pointtype=Int32;compdev=.5;compmax=86400;excdev=0;excdevpercent=0;excmax=0;pointsource=OSIDemo-AFAnalysis;step=1</ConfigString>
+        <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.Pump Status.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Pump Type</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT Type FROM [OSIDemo_Pump Manufacturer Information] WHERE Manufacturer = @Manufacturer</ConfigString>
+        <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>RunHours Since Installation</Name>
+        <DefaultUOM>h</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>RunHours Since Maintenance</Name>
+        <DefaultUOM>h</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>RunHours Maintenance Status</Name>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttributeTemplate>
+        <AFAttributeTemplate>
+          <Name>RunHours Maintenance Trigger</Name>
+          <DefaultUOM>h</DefaultUOM>
+          <Type>Single</Type>
+          <Value type="Single">1200</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Serial Number</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT [Product Name] FROM [OSIDemo_Pump Manufacturer Information] WHERE Manufacturer = @Manufacturer</ConfigString>
+        <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Suction Pressure</Name>
+        <DefaultUOM>psi</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%;ptclassname=base;pointtype=Float32;pointsource=OSIDemo-AFAnalysis</ConfigString>
+        <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String">0</Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.Suction Pressure.%ID%;</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Total Head</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <DefaultUOM>ft</DefaultUOM>
+        <Type>Single</Type>
+        <Value type="Single">150</Value>
+        <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>CBM - Comparison-Based Analysis</Name>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>WaterPower := ('{99b25e14-3961-42b3-93a6-3f0fa9acbbef};Discharge Flow Rate')*('{23be02ad-a105-47dd-96bd-a0b6cf328603};Total Head')/3960;
+Efficiency := WaterPower/'{a28cf203-fba7-40c9-8d4b-2f0ad5b43585};Horsepower'*100;
+AverageTemp := TagAvg('{edd65088-f780-4fbe-94d9-0104465762cf};Bearing Temperature','t','*');
+HourlyMaxFlowRate := TagMax('{99b25e14-3961-42b3-93a6-3f0fa9acbbef};Discharge Flow Rate','*-1h','*');</ConfigString>
+          <VariableMapping>Efficiency||Calculated Efficiency;[GUID]||{bb686f90-6078-4a55-967f-73fb5552ccb1};AverageTemp||Daily Average Bearing Temperature;[GUID]||{f9dfa5a7-4699-4c31-b2e8-ffaeb6172f45};HourlyMaxFlowRate||Hourly Maximum Discharge Flow Rate;[GUID]||{3cb60bc6-9641-4b74-b9f3-624dc6af5b68};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=300</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>CBM - Notification Trigger Analysis</Name>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>NotificationStatus := IF '{e96397e4-c892-4a12-a7b0-d11ed523f644};RunHours Since Maintenance' &gt; '{e96397e4-c892-4a12-a7b0-d11ed523f644};RunHours Since Maintenance|{a0c64f77-70b6-44ff-a538-215589f4f198};RunHours Maintenance Trigger' 
+THEN "Alarm" 
+ELSE "Good";</ConfigString>
+          <VariableMapping>NotificationStatus||RunHours Since Maintenance|RunHours Maintenance Status;[GUID]||{78e666a7-643e-4845-ad81-e625407728a0};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=1800</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>CBM - Pump Status</Name>
+        <Description>On/Off Status of Pump</Description>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>Status := IF '{706d2b90-67c6-463a-80ea-3826fa90b4df};Current Draw' &gt; 1 AND '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "OFF" THEN "ON"
+ELSE IF
+'{706d2b90-67c6-463a-80ea-3826fa90b4df};Current Draw' &lt; 1 AND '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "ON" THEN "OFF"
+ELSE IF
+'{706d2b90-67c6-463a-80ea-3826fa90b4df};Current Draw' &gt; 1 AND '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "ON" THEN NoOutput()
+ELSE IF
+'{706d2b90-67c6-463a-80ea-3826fa90b4df};Current Draw' &lt; 1 AND '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "OFF" THEN NoOutput()
+ELSE IF TagBad('{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status','*') THEN "OFF"
+ELSE NoOutput();</ConfigString>
+          <VariableMapping>Status||Pump Status;[GUID]||{8bb47700-1775-4ec1-b084-8cbf74449c9b};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=300</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>CBM - Usage-Based Analysis</Name>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>LastMaintRuntime := TimeEq('{bcd17190-37e7-4827-a94a-2c33399593b9};Pump Status','{ffa11a78-c1d4-495d-9361-bd0d0b85ccb4};Maintenance Date','*',"ON")/3600;
+InstallationRuntime := TimeEq('{bcd17190-37e7-4827-a94a-2c33399593b9};Pump Status','{77d3daf1-db5a-4e97-a7e6-7d81f0a74348};Installation Date','*',"ON")/3600;
+NumberofStarts := EventCount('{bcd17190-37e7-4827-a94a-2c33399593b9};Pump Status','{ffa11a78-c1d4-495d-9361-bd0d0b85ccb4};Maintenance Date','*')/2;</ConfigString>
+          <VariableMapping>LastMaintRuntime||RunHours Since Maintenance;[GUID]||{e96397e4-c892-4a12-a7b0-d11ed523f644};InstallationRuntime||RunHours Since Installation;[GUID]||{55c568e3-174b-42e2-9676-4567cfcd87a5};NumberofStarts||Number of Starts Since Maintenance;[GUID]||{cf4a9e07-99d4-4126-bb61-f4510f0722e2};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=300</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo - Demo Data - Current Draw</Name>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RatedCurrentDraw := // Typical Current Draw of the Pump
+25;
+RandomEq := Rand();
+CurrentDrawEq := IF RandomEq &gt; .33 THEN Rand(RatedCurrentDraw,1) ELSE 0;</ConfigString>
+          <VariableMapping>CurrentDrawEq||Current Draw;[GUID]||{706d2b90-67c6-463a-80ea-3826fa90b4df};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=1800</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo - Demo Data - Process Variables</Name>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RatedFlowRate := // Typical Flow Rate of the Pump
+450;
+RatedPressure := // Typical Pressure of the Pump
+150;
+RatedTemperature := // Typical Temperature of the Pump
+170;
+FlowRate := IF '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "ON" THEN Rand(RatedFlowRate,35) ELSE 0;
+Pressure := IF '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "ON" THEN Rand(RatedPressure,10) ELSE Rand(.1,.2);
+PumpStatusSeconds := SecSinceChange('{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status');
+Temperature := IF '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "ON" and '{edd65088-f780-4fbe-94d9-0104465762cf};Bearing Temperature' &lt; RatedTemperature
+THEN '{edd65088-f780-4fbe-94d9-0104465762cf};Bearing Temperature'+Rand(5,2)
+ELSE IF '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "ON" and '{edd65088-f780-4fbe-94d9-0104465762cf};Bearing Temperature' &gt; RatedTemperature
+THEN Rand(RatedTemperature,6) 
+ELSE If '{8bb47700-1775-4ec1-b084-8cbf74449c9b};Pump Status' = "OFF"
+THEN ( (Rand(1,.1)*RatedTemperature - 90) * Exp(-.001*PumpStatusSeconds)) + 90
+ELSE NoOutput();</ConfigString>
+          <VariableMapping>FlowRate||Discharge Flow Rate;[GUID]||{99b25e14-3961-42b3-93a6-3f0fa9acbbef};Pressure||Suction Pressure;[GUID]||{2aaea1b2-0771-466a-a6fb-8a22e867b9f2};Temperature||Bearing Temperature;[GUID]||{edd65088-f780-4fbe-94d9-0104465762cf};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=300</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFNotificationTemplate>
+      <Name>CBM - Pump Runtime Limit for Maintenance</Name>
+      <Description>Notification for pump runtime is greater than pump runtime limit</Description>
+      <Type>None</Type>
+      <InstanceType>Notification</InstanceType>
+      <AllowElementToExtend>true</AllowElementToExtend>
+      <AutoCreate>DoNotCreate</AutoCreate>
+      <AFAnalysisTemplate>
+        <Name>Template1::AnalysisTemplate</Name>
+        <Target>Pump</Target>
+        <AFAnalysisRule>
+          <AFPlugIn>ConditionGroup</AFPlugIn>
+          <AFAnalysisRule>
+            <AFPlugIn>Sequential</AFPlugIn>
+            <ConfigString>mappednames=a829e48e-3f51-48b9-aa0b-1eca08609110|73e62877-7130-4b66-9abf-5565b809533b</ConfigString>
+            <AFAnalysisRule>
+              <AFPlugIn>Comparison</AFPlugIn>
+              <ConfigString>Deadband=0;Operator=EqualTo;TargetValue=Alarm;TargetValueType=String</ConfigString>
+              <VariableMapping>Output||a829e48e-3f51-48b9-aa0b-1eca08609110;Input||RunHours Since Maintenance|RunHours Maintenance Status;</VariableMapping>
+            </AFAnalysisRule>
+            <AFAnalysisRule>
+              <AFPlugIn>TimeTrue</AFPlugIn>
+              <ConfigString>EvaluationOption=Clock;TimeTrueValue=0</ConfigString>
+              <VariableMapping>Input||a829e48e-3f51-48b9-aa0b-1eca08609110;Output||73e62877-7130-4b66-9abf-5565b809533b;</VariableMapping>
+            </AFAnalysisRule>
+            <AFAnalysisRule>
+              <AFPlugIn>StateAndPriority</AFPlugIn>
+              <ConfigString>Code=1;Name=OutsideControl;Priority=Normal</ConfigString>
+              <VariableMapping>Input||73e62877-7130-4b66-9abf-5565b809533b;</VariableMapping>
+            </AFAnalysisRule>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAttributeTemplate>
+        <Name>Trigger Input</Name>
+        <Type>Object</Type>
+        <Value type="IPIPersist">118 {F952A4F7-EF25-414b-BB5B-0A8C85DA8FF7} 2\Good\621355968000000000\\System.Guid fb544559-b895-44d3-a20b-731ee166a180</Value>
+        <AFAttributeCategoryRef>Trigger Input</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFNotificationContent>
+        <Name>Trigger Input</Name>
+        <ContentType>TriggerInput</ContentType>
+        <DisplayName>Include Trigger Input</DisplayName>
+      </AFNotificationContent>
+    </AFNotificationTemplate>
+    <AFElement>
+      <Name>PI Data Archive</Name>
+      <AFAttribute>
+        <Name>Name</Name>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String">%Server%</Value>
+      </AFAttribute>
+    </AFElement>
+    <AFElement>
+      <Name>Pump Station</Name>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Pump01</Name>
+        <Template>Pump</Template>
+        <AFAttribute>
+          <Name>Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+          <AFAttribute>
+            <Name>TagName</Name>
+          </AFAttribute>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Calculated Efficiency</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Current Draw</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Daily Average Bearing Temperature</Name>
+          <UOM>°F</UOM>
+          <Value type="Double">141.7558344121565</Value>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Horsepower</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Hourly Maximum Discharge Flow Rate</Name>
+          <UOM>US gal/min</UOM>
+          <Value type="Single">459.367737</Value>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Maintenance Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <Value type="String">PumpsXStream</Value>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Number of Starts Since Maintenance</Name>
+          <UOM>count</UOM>
+          <Value type="Int32">204</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Status</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Type</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Installation</Name>
+          <UOM>h</UOM>
+          <Value type="Single">365.333344</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Maintenance</Name>
+          <UOM>h</UOM>
+          <Value type="Single">287.416656</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Suction Pressure</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Head</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>CBM - Comparison-Based Analysis</Name>
+          <Template>CBM - Comparison-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump01</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Notification Trigger Analysis</Name>
+          <Template>CBM - Notification Trigger Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump01</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Pump Status</Name>
+          <Description>On/Off Status of Pump</Description>
+          <Template>CBM - Pump Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump01</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Usage-Based Analysis</Name>
+          <Template>CBM - Usage-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump01</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Current Draw</Name>
+          <Template>OSIDemo - Demo Data - Current Draw</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump01</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Process Variables</Name>
+          <Template>OSIDemo - Demo Data - Process Variables</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump01</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Pump02</Name>
+        <Template>Pump</Template>
+        <AFAttribute>
+          <Name>Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Calculated Efficiency</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Current Draw</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Daily Average Bearing Temperature</Name>
+          <UOM>°F</UOM>
+          <Value type="Double">146.67525970726683</Value>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Horsepower</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Hourly Maximum Discharge Flow Rate</Name>
+          <UOM>US gal/min</UOM>
+          <Value type="Single">462.869141</Value>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Maintenance Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <Value type="String">Get-Pumped</Value>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Number of Starts Since Maintenance</Name>
+          <UOM>count</UOM>
+          <Value type="Int32">194</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Status</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Type</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Installation</Name>
+          <UOM>h</UOM>
+          <Value type="Single">395.333344</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Maintenance</Name>
+          <UOM>h</UOM>
+          <Value type="Single">302.416656</Value>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Suction Pressure</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Head</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>CBM - Comparison-Based Analysis</Name>
+          <Template>CBM - Comparison-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump02</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Notification Trigger Analysis</Name>
+          <Template>CBM - Notification Trigger Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump02</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Pump Status</Name>
+          <Description>On/Off Status of Pump</Description>
+          <Template>CBM - Pump Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump02</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Usage-Based Analysis</Name>
+          <Template>CBM - Usage-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump02</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Current Draw</Name>
+          <Template>OSIDemo - Demo Data - Current Draw</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump02</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Process Variables</Name>
+          <Template>OSIDemo - Demo Data - Process Variables</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump02</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Pump03</Name>
+        <Template>Pump</Template>
+        <AFAttribute>
+          <Name>Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Calculated Efficiency</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Current Draw</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Daily Average Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Horsepower</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Hourly Maximum Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Maintenance Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <Value type="String">Get-Pumped</Value>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Number of Starts Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Status</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Type</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Installation</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Suction Pressure</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Head</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>CBM - Comparison-Based Analysis</Name>
+          <Template>CBM - Comparison-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump03</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Notification Trigger Analysis</Name>
+          <Template>CBM - Notification Trigger Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump03</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Pump Status</Name>
+          <Description>On/Off Status of Pump</Description>
+          <Template>CBM - Pump Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump03</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Usage-Based Analysis</Name>
+          <Template>CBM - Usage-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump03</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Current Draw</Name>
+          <Template>OSIDemo - Demo Data - Current Draw</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump03</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Process Variables</Name>
+          <Template>OSIDemo - Demo Data - Process Variables</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump03</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Pump04</Name>
+        <Template>Pump</Template>
+        <AFAttribute>
+          <Name>Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Calculated Efficiency</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Current Draw</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Daily Average Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Horsepower</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Hourly Maximum Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Maintenance Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <Value type="String">Pump-U Up</Value>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Number of Starts Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Status</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Type</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Installation</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Suction Pressure</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Head</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>CBM - Comparison-Based Analysis</Name>
+          <Template>CBM - Comparison-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump04</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Notification Trigger Analysis</Name>
+          <Template>CBM - Notification Trigger Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump04</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Pump Status</Name>
+          <Description>On/Off Status of Pump</Description>
+          <Template>CBM - Pump Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump04</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Usage-Based Analysis</Name>
+          <Template>CBM - Usage-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump04</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Current Draw</Name>
+          <Template>OSIDemo - Demo Data - Current Draw</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump04</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Process Variables</Name>
+          <Template>OSIDemo - Demo Data - Process Variables</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump04</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Pump05</Name>
+        <Template>Pump</Template>
+        <AFAttribute>
+          <Name>Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Calculated Efficiency</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Current Draw</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Daily Average Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Horsepower</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Hourly Maximum Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Maintenance Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <Value type="String">Get-Pumped</Value>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Number of Starts Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Status</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Type</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Installation</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Suction Pressure</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Head</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>CBM - Comparison-Based Analysis</Name>
+          <Template>CBM - Comparison-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump05</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Notification Trigger Analysis</Name>
+          <Template>CBM - Notification Trigger Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump05</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Pump Status</Name>
+          <Description>On/Off Status of Pump</Description>
+          <Template>CBM - Pump Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump05</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Usage-Based Analysis</Name>
+          <Template>CBM - Usage-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump05</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Current Draw</Name>
+          <Template>OSIDemo - Demo Data - Current Draw</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump05</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Process Variables</Name>
+          <Template>OSIDemo - Demo Data - Process Variables</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump05</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Pump06</Name>
+        <Template>Pump</Template>
+        <AFAttribute>
+          <Name>Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Calculated Efficiency</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Current Draw</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Daily Average Bearing Temperature</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Horsepower</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Hourly Maximum Discharge Flow Rate</Name>
+          <AFAttributeCategoryRef>Comparison Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Installation Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Maintenance Date</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Manufacturer</Name>
+          <Value type="String">PumpsXStream</Value>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Number of Starts Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Status</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Pump Type</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Installation</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>RunHours Since Maintenance</Name>
+          <AFAttributeCategoryRef>Usage Based Maintenance Information</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Serial Number</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Suction Pressure</Name>
+          <AFAttributeCategoryRef>Process Variables</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Total Head</Name>
+          <AFAttributeCategoryRef>Asset Properties</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAnalysis>
+          <Name>CBM - Comparison-Based Analysis</Name>
+          <Template>CBM - Comparison-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump06</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Notification Trigger Analysis</Name>
+          <Template>CBM - Notification Trigger Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump06</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Pump Status</Name>
+          <Description>On/Off Status of Pump</Description>
+          <Template>CBM - Pump Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump06</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>CBM - Usage-Based Analysis</Name>
+          <Template>CBM - Usage-Based Analysis</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump06</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Current Draw</Name>
+          <Template>OSIDemo - Demo Data - Current Draw</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump06</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OSIDemo - Demo Data - Process Variables</Name>
+          <Template>OSIDemo - Demo Data - Process Variables</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Pump Station\Pump06</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+    </AFElement>
+  </AFDatabase>
+</AF>

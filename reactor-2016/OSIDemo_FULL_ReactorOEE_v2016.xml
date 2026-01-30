@@ -1,0 +1,1645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.5.7166" ExportMode="NoUniqueID" PISystem="CSSSQLAF2" Database="GEN_FULL_ReactorOEE" Description="Process monitoring of common pharmaceutical equipment with Asset Based PI" Created="2016-05-27T18:03:36.4016275Z" id="cbf159d6-52ec-49d3-aa8d-647a282e0fb5" ParentKey="b8ac1265-8ab5-42ec-9a30-2735eba9ffe5" ExportedObject="GEN_FULL_ReactorOEE" ExportedType="AFDatabase" Identity="Database" PIPersist="152 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{b8ac1265-8ab5-42ec-9a30-2735eba9ffe5}\{cbf159d6-52ec-49d3-aa8d-647a282e0fb5}*CSSSQLAF2\GEN_FULL_ReactorOEE">
+  <AFDatabase>
+    <Name>GEN_FULL_ReactorOEE</Name>
+    <Description>Process monitoring of common pharmaceutical equipment with Asset Based PI</Description>
+    <AFAnalysisCategory>
+      <Name>Downtime</Name>
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>Logic</Name>
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>OEE</Name>
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>OSIDemo</Name>
+    </AFAnalysisCategory>
+    <AFAttributeCategory>
+      <Name>Analytics</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Cake Properties</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Critical Process Parameters</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Critical Quality Attributes</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Cycle Times</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Element Properties</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Media Properties</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Non-rollup OEE metrics</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>OEE metrics</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Parameters</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Post Process</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Process Data</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Properties</Name>
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Targets</Name>
+    </AFAttributeCategory>
+    <AFTable>
+      <Name>OSIDemo_Pump Information</Name>
+      <ExternalPersist>false</ExternalPersist>
+      <Schema>
+<xs:schema id="OSIDemo_Pump_x0020_InformationDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OSIDemo_Pump_x0020_InformationDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OSIDemo_Pump_x0020_Information">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Line" type="xs:string" minOccurs="0" />
+              <xs:element name="Pump" type="xs:string" minOccurs="0" />
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+              <xs:element name="Serail_x0020_Number" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+      <DataTable><OSIDemo_Pump_x0020_InformationDataSet>
+  <OSIDemo_Pump_x0020_Information>
+    <Line>Line 1</Line>
+    <Pump>Inlet Pump</Pump>
+    <Manufacturer>Pump-U UP</Manufacturer>
+    <Serail_x0020_Number>72OK8LGG</Serail_x0020_Number>
+  </OSIDemo_Pump_x0020_Information>
+  <OSIDemo_Pump_x0020_Information>
+    <Line>Line 1</Line>
+    <Pump>Outlet Pump</Pump>
+    <Manufacturer>PumpsXStream</Manufacturer>
+    <Serail_x0020_Number>MTF8PDEN</Serail_x0020_Number>
+  </OSIDemo_Pump_x0020_Information>
+  <OSIDemo_Pump_x0020_Information>
+    <Line>Line 2</Line>
+    <Pump>Inlet Pump</Pump>
+    <Manufacturer>Pump-U UP</Manufacturer>
+    <Serail_x0020_Number>CVO8YOUC</Serail_x0020_Number>
+  </OSIDemo_Pump_x0020_Information>
+  <OSIDemo_Pump_x0020_Information>
+    <Line>Line 2</Line>
+    <Pump>Outlet Pump</Pump>
+    <Manufacturer>Get-Pumped</Manufacturer>
+    <Serail_x0020_Number>JNLN0XTG</Serail_x0020_Number>
+  </OSIDemo_Pump_x0020_Information>
+  <OSIDemo_Pump_x0020_Information>
+    <Line>Line 3</Line>
+    <Pump>Inlet Pump</Pump>
+    <Manufacturer>PumpWorld</Manufacturer>
+    <Serail_x0020_Number>AUTHWIDB</Serail_x0020_Number>
+  </OSIDemo_Pump_x0020_Information>
+  <OSIDemo_Pump_x0020_Information>
+    <Line>Line 3</Line>
+    <Pump>Outlet Pump</Pump>
+    <Manufacturer>Get-Pumped</Manufacturer>
+    <Serail_x0020_Number>1921YDLM</Serail_x0020_Number>
+  </OSIDemo_Pump_x0020_Information>
+</OSIDemo_Pump_x0020_InformationDataSet></DataTable>
+    </AFTable>
+    <AFElementTemplate>
+      <Name>Downtime</Name>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <NamingPattern>OSIDemo_%..\ELEMENT% %ELEMENT% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <AFAttributeTemplate>
+        <Name>Asset</Name>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%..\Element%";" ";"%Element%";</ConfigString>
+        <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Duration</Name>
+        <DefaultUOM>min</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>|Reason Code;TimeMethod=NotSupported;TimeRangeMethod=Count;UOM=s</ConfigString>
+        <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Line</Name>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%..\Element%";</ConfigString>
+        <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Manufacturer</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>.\Elements[.]|Manufacturer</ConfigString>
+        <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Reason Code</Name>
+        <Type>String</Type>
+        <Value type="String"></Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Reason Code;TimeRangeMethod=StartTime</ConfigString>
+        <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Downtime with Lost Production</Name>
+      <BaseTemplate>Downtime</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <NamingPattern>OSIDemo_%..\ELEMENT% %ELEMENT% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <AFAttributeTemplate>
+        <Name>Lost Production</Name>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>Formula</DataReference>
+        <ConfigString>D=Duration;UOM=min;P=Production Rate Target;UOM=US gal/min;[D*P];UOM=US gal</ConfigString>
+        <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Production Rate Target</Name>
+        <DefaultUOM>US gal/min</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>Formula</DataReference>
+        <ConfigString>A=.\Elements[.]\..\|%attribute%;[A];UOM=US gal/min</ConfigString>
+        <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Line</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">Plant\Line 1</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>Availability</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>End Time</Name>
+        <Type>DateTime</Type>
+        <Value type="DateTime">2016-02-16T00:06:36Z</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>*</ConfigString>
+        <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>OEE</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Performance</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Production Rate Target</Name>
+        <DefaultUOM>US gal/min</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">450</Value>
+        <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Quality</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Start Time</Name>
+        <Type>DateTime</Type>
+        <Value type="DateTime">2016-02-16T00:00:00Z</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>'*-1h'</ConfigString>
+        <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Status</Name>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;step=1;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>Line Status</Name>
+        <Target>Line</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Name=*]|Attributes[@Name=Status];Sum||Status;[GUID]||{290b282b-090e-4431-a838-26315a02cae5};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>OEE</Name>
+        <Target>Line</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>TimeRange := Int('{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time'-'{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time');
+Availability := ( TimeGE('{290b282b-090e-4431-a838-26315a02cae5};Status','{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time','{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time',1) /  TimeRange ) * 100;
+ProductionRate := ( TagTot('.\Outlet Pump|Flow Rate','{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time','{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time') * 1440 ) / ( TimeRange / 60);
+Performance := ( ProductionRate / '{027f97ef-c2c4-47af-913d-478cfb3a03a4};Production Rate Target' ) * 100;
+Quality := (TagAvg('.\Elements[@Template=Reactor]|Outlet Sensor','{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time','{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time')/'.\Elements[@Template=Reactor]|Outlet Sensor Target') * 100;
+OEE := (Availability/100) * (Performance/100) * (Quality/100) * 100;</ConfigString>
+          <VariableMapping>Availability||Availability;[GUID]||{184d2b6e-ad29-4848-8143-a71203a9d4fa};Quality||Quality;[GUID]||{6adbfc35-2afc-4917-b24e-8ddf07f84caa};OEE||OEE;[GUID]||{56463dc8-07fe-4a91-8043-13cb9fecfa9d};Performance||Performance;[GUID]||{92ea37d8-147b-4832-8e9a-5e0009a0e830};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=3600</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Line without Quality</Name>
+      <BaseTemplate>Line</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFAttributeTemplate>
+        <Name>Availability</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>OEE</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Performance</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Quality</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">100</Value>
+        <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>OEE</Name>
+        <Target>Line without Quality</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>TimeRange := Int('{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time'-'{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time');
+Availability := ( TimeGE('{290b282b-090e-4431-a838-26315a02cae5};Status','{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time','{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time',1) /  TimeRange ) * 100;
+ProductionRate := ( TagTot('.\Outlet Pump|Flow Rate','{eeb844fd-f6f5-4c01-9c22-540601857015};Start Time','{0be93765-bb9a-4884-a7bf-ca2de1d93427};End Time') * 1440 ) / ( TimeRange / 60);
+
+Performance := ( ProductionRate / '{027f97ef-c2c4-47af-913d-478cfb3a03a4};Production Rate Target' ) * 100;
+Quality := 100;
+OEE := (Availability/100) * (Performance/100) * (Quality/100) * 100;</ConfigString>
+          <VariableMapping>Availability||Availability;[GUID]||{22786eac-6675-455a-b319-e2e82aa25378};OEE||OEE;[GUID]||{7c5d6bfb-b7ba-4a94-a627-5a4ae436af2e};Performance||Performance;[GUID]||{ecb0dc0b-c725-41ad-88ab-de104d2fcfc7};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=3600</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Pump</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">Plant\Line 2\Inlet Pump</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>Bearing Temperature</Name>
+        <DefaultUOM>°F</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM=°F;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+        <AFAttributeTemplate>
+          <Name>Threshold</Name>
+          <DefaultUOM>°F</DefaultUOM>
+          <Type>Double</Type>
+          <Value type="Double">200</Value>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Flow Rate</Name>
+        <DefaultUOM>US gal/min</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM=US gal/min;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Manufacturer</Name>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT Manufacturer FROM [OSIDemo_Pump Information] WHERE Line = '%..\Element%' AND Pump = '%Element%'</ConfigString>
+        <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>OnOff</Name>
+        <Description>Random Number Generator for Simulation</Description>
+        <IsHidden>true</IsHidden>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeTemplate>
+          <Name>On Threshold</Name>
+          <IsHidden>true</IsHidden>
+          <Type>Double</Type>
+          <Value type="Double">0.1</Value>
+        </AFAttributeTemplate>
+        <AFAttributeTemplate>
+          <Name>Pressure Threshold</Name>
+          <IsHidden>true</IsHidden>
+          <Type>Double</Type>
+          <Value type="Double">0.9</Value>
+        </AFAttributeTemplate>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+        <AFAttributeTemplate>
+          <Name>Temperature Threshold</Name>
+          <IsHidden>true</IsHidden>
+          <Type>Double</Type>
+          <Value type="Double">0.95</Value>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Reason Code</Name>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;pointtype=String;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Serial Number</Name>
+        <Type>String</Type>
+        <Value type="String">0</Value>
+        <DataReference>Table Lookup</DataReference>
+        <ConfigString>SELECT [Serail Number] FROM [OSIDemo_Pump Information] WHERE Line = '%..\Element%' AND Pump = '%Element%'</ConfigString>
+        <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Status</Name>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;step=1;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Suction Pressure</Name>
+        <DefaultUOM>psi</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM=psi;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+        <AFAttributeTemplate>
+          <Name>Threshold</Name>
+          <DefaultUOM>psi</DefaultUOM>
+          <Type>Double</Type>
+          <Value type="Double">180</Value>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo_Simulated Data_OnOff</Name>
+        <Description>For creating demo data for Reactor OEE example kit</Description>
+        <Target>Pump</Target>
+        <AFAnalysisCategoryRef>OSIDemo</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>OnOff := If TagBad('{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff','*') THEN 0 ELSE IF PrevVal('{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff','*') &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{9ef539e6-6057-47a2-a8f4-80109c80b8ad};Pressure Threshold' THEN 0 ELSE Rand();</ConfigString>
+          <VariableMapping>OnOff||OnOff;[GUID]||{d0d93ee1-3f79-417e-9f39-8691f608bd3e};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+          <ConfigString>Frequency=1800</ConfigString>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo_Simulated Pump Data</Name>
+        <Description>For creating demo data for Reactor OEE example kit</Description>
+        <Target>Pump</Target>
+        <AFAnalysisCategoryRef>OSIDemo</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RatedFlowRate := // Typical Flow Rate of the Pump
+450;
+RatedPressure := // Typical Pressure of the Pump
+150;
+
+HighPressure := // Atypical Pressure of the Pump
+190;
+RatedTemperature := // Typical Temperature of the Pump
+170;
+
+HighTemperature := // Atypical Temperature of the Pump
+210;
+PumpStatus := IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{bf21a96d-4f57-4cd7-8fcf-2ad3662d4a75};On Threshold' THEN 1 ELSE 0;
+FlowRate := IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{bf21a96d-4f57-4cd7-8fcf-2ad3662d4a75};On Threshold' THEN Rand(RatedFlowRate,25) ELSE 0;
+Pressure := IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{bf21a96d-4f57-4cd7-8fcf-2ad3662d4a75};On Threshold' AND ('{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &lt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{9ef539e6-6057-47a2-a8f4-80109c80b8ad};Pressure Threshold' OR '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{3c709937-cfce-4bc2-9fb7-108a820d7710};Temperature Threshold')  THEN Rand(RatedPressure,10) 
+ELSE IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{9ef539e6-6057-47a2-a8f4-80109c80b8ad};Pressure Threshold' AND '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &lt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{3c709937-cfce-4bc2-9fb7-108a820d7710};Temperature Threshold' THEN Rand(HighPressure,5) ELSE Rand(.1,.2);
+OnOffSeconds := SecSinceChange('{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff');
+Temperature := IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{bf21a96d-4f57-4cd7-8fcf-2ad3662d4a75};On Threshold' AND '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &lt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{3c709937-cfce-4bc2-9fb7-108a820d7710};Temperature Threshold' AND '{5f41f5dd-1439-4ebf-9b81-28f9a3817070};Bearing Temperature' &lt; RatedTemperature THEN '{5f41f5dd-1439-4ebf-9b81-28f9a3817070};Bearing Temperature' + Rand(5,2)
+ELSE IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{bf21a96d-4f57-4cd7-8fcf-2ad3662d4a75};On Threshold' AND '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &lt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{3c709937-cfce-4bc2-9fb7-108a820d7710};Temperature Threshold' AND '{5f41f5dd-1439-4ebf-9b81-28f9a3817070};Bearing Temperature' &gt;= RatedTemperature THEN Rand(RatedTemperature,6)
+ELSE IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &gt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{3c709937-cfce-4bc2-9fb7-108a820d7710};Temperature Threshold' THEN Rand(HighTemperature,3)
+ELSE IF '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff' &lt; '{d0d93ee1-3f79-417e-9f39-8691f608bd3e};OnOff|{bf21a96d-4f57-4cd7-8fcf-2ad3662d4a75};On Threshold' THEN ((Rand(1,0.1)*RatedTemperature - 90)*Exp(-0.001*OnOFfSeconds)) + 90 ELSE NoOutput();</ConfigString>
+          <VariableMapping>PumpStatus||Status;[GUID]||{1e38fe14-9410-4763-95a9-ed7ac0ddd6bf};Pressure||Suction Pressure;[GUID]||{b0db7db7-6ecc-4501-ae05-84c8381d2fd5};Temperature||Bearing Temperature;[GUID]||{5f41f5dd-1439-4ebf-9b81-28f9a3817070};FlowRate||Flow Rate;[GUID]||{a567d9a3-663c-40d4-9eac-fb07d8ca2950};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Pump Downtime</Name>
+        <Target>Pump</Target>
+        <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=c300186d-4980-46b9-9e63-7d9d5d4f20f6;EFTNAME=Downtime</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>StartTrigger := '{1e38fe14-9410-4763-95a9-ed7ac0ddd6bf};Status'=0;</ConfigString>
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Reason Code</Name>
+        <Target>Pump</Target>
+        <AFAnalysisCategoryRef>Logic</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>ReasonCode := IF '{1e38fe14-9410-4763-95a9-ed7ac0ddd6bf};Status'=0 AND PrevVal('{5f41f5dd-1439-4ebf-9b81-28f9a3817070};Bearing Temperature','*')&gt;'{5f41f5dd-1439-4ebf-9b81-28f9a3817070};Bearing Temperature|{7a6c14cb-21a3-452a-8bc8-1014f3f89b2d};Threshold' THEN "High Temperature"
+ELSE IF '{1e38fe14-9410-4763-95a9-ed7ac0ddd6bf};Status'=0 AND PrevVal('{b0db7db7-6ecc-4501-ae05-84c8381d2fd5};Suction Pressure','*')&gt;'{b0db7db7-6ecc-4501-ae05-84c8381d2fd5};Suction Pressure|{67e6fde3-c93a-4ead-9c19-f63418561b28};Threshold' THEN "High Pressure"
+ELSE "Unknown";</ConfigString>
+          <VariableMapping>ReasonCode||Reason Code;[GUID]||{161f2958-f3f6-48a5-b8d7-47118b88c7c3};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Outlet Pump</Name>
+      <BaseTemplate>Pump</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFAnalysisTemplate>
+        <Name>Pump Downtime</Name>
+        <Target>Outlet Pump</Target>
+        <AFAnalysisCategoryRef>Downtime</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=72575048-ea54-4b75-ae80-4d9424afcc98;EFTNAME=Downtime with Lost Production</ConfigString>
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>StartTrigger := '{1e38fe14-9410-4763-95a9-ed7ac0ddd6bf};Status'=0;</ConfigString>
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>AnalysisTimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>PI Data Archive</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFAttributeTemplate>
+        <Name>Name</Name>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <Type>String</Type>
+        <Value type="String">Enter_Your_PI_Data_Archive_Name</Value>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Plant</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">Plant</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>Average Availability</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Average OEE</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Average Performance</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Average Quality</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>Avg Availability</Name>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Template=Line]|Attributes[@Category=OEE metrics][@Name=Availability];Average||Average Availability;[GUID]||{40f86a39-92ef-4e06-ad54-7cebab151514};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Avg OEE</Name>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Template=Line]|Attributes[@Category=OEE metrics][@Name=OEE];Average||Average OEE;[GUID]||{95052e2c-88f4-42e1-8096-f3175af13f2d};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Avg Performance</Name>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Template=Line]|Attributes[@Category=OEE metrics][@Name=Performance];Average||Average Performance;[GUID]||{b35d815a-5dc6-4785-bf1d-a4fdb4b91bf5};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Avg Quality</Name>
+        <Target>Plant</Target>
+        <AFAnalysisCategoryRef>OEE</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>Rollup</AFPlugIn>
+          <VariableMapping>SearchCriteria||Elements[@Template=Line]|Attributes[@Category=OEE metrics][@Name=Quality];Average||Average Quality;[GUID]||{4b486927-63de-4b65-b63d-b888664dc721};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Reactor</Name>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">Plant\Line 1\Reactor</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>Temperature</Name>
+        <DefaultUOM>°F</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM=°F;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;engunits=°F;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo_Simulated Reactor Data</Name>
+        <Description>For creating demo data for Reactor OEE example kit</Description>
+        <Target>Reactor</Target>
+        <AFAnalysisCategoryRef>OSIDemo</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RatedTemperature := //Typical Temperature of Reactor
+200;
+Temperature := Rand(RatedTemperature,20);
+</ConfigString>
+          <VariableMapping>Temperature||Temperature;[GUID]||{c3bb1386-80f4-4f8f-a532-a4e5c8d1f7c7};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Reactor with Outlet Sensor</Name>
+      <BaseTemplate>Reactor</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">Plant\Line 1\Reactor</Value>
+      </AFExtendedProperty>
+      <AFAttributeTemplate>
+        <Name>Outlet Sensor</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM="%";pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Outlet Sensor Target</Name>
+        <DefaultUOM>%</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">7.5</Value>
+        <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Temperature</Name>
+        <DefaultUOM>°F</DefaultUOM>
+        <Type>Double</Type>
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|Tagname%;UOM=°F;pointtype=Float32;pointsource=OSIDemo-AFAnalysis;descriptor=Asset Based PI Example Kit for Reactor OEE tag</ConfigString>
+        <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>TagName</Name>
+          <IsHidden>true</IsHidden>
+          <Type>String</Type>
+          <Value type="String"></Value>
+          <DataReference>String Builder</DataReference>
+          <ConfigString>OSIDemo_%..\Element%.%Element%.%|Attribute%.%ID%</ConfigString>
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>OSIDemo_Simulated Reactor Data</Name>
+        <Description>For creating demo data for Reactor OEE example kit</Description>
+        <Target>Reactor with Outlet Sensor</Target>
+        <AFAnalysisCategoryRef>OSIDemo</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>RatedTemperature := //Typical Temperature of Reactor
+200;
+RatedOutletSenor := //Typical Outlet Sensor
+7.5;
+Temperature := Rand(RatedTemperature,20);
+
+OutletSensor := RatedOutletSenor - (StDev('{cf6bcfd8-ca5e-4934-81a5-ff7f73fbe7a8};Temperature','*-15m','*')/5);</ConfigString>
+          <VariableMapping>Temperature||Temperature;[GUID]||{cf6bcfd8-ca5e-4934-81a5-ff7f73fbe7a8};OutletSensor||Outlet Sensor;[GUID]||{df3c3896-baf5-4106-a58c-e6cb9089f8a0};[GUID]||[UNSET];</VariableMapping>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Periodic</AFPlugIn>
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElement>
+      <Name>PI Data Archive</Name>
+      <Template>PI Data Archive</Template>
+      <AFAttribute>
+        <Name>Name</Name>
+      </AFAttribute>
+    </AFElement>
+    <AFElement>
+      <Name>Plant</Name>
+      <Template>Plant</Template>
+      <AFAttribute>
+        <Name>Average Availability</Name>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average OEE</Name>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Performance</Name>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFAttribute>
+        <Name>Average Quality</Name>
+        <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+      </AFAttribute>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Line 1</Name>
+        <Template>Line</Template>
+        <AFAttribute>
+          <Name>Availability</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>End Time</Name>
+          <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>OEE</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Performance</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Production Rate Target</Name>
+          <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Quality</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Start Time</Name>
+          <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Status</Name>
+          <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Inlet Pump</Name>
+          <Template>Pump</Template>
+          <AFAttribute>
+            <Name>Bearing Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow Rate</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>OnOff</Name>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Reason Code</Name>
+            <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Status</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Suction Pressure</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Data_OnOff</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Data_OnOff</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Pump Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Pump Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Pump Downtime</Name>
+            <Template>Pump Downtime</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Reason Code</Name>
+            <Template>Reason Code</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Outlet Pump</Name>
+          <Template>Outlet Pump</Template>
+          <AFAttribute>
+            <Name>Bearing Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow Rate</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>OnOff</Name>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Reason Code</Name>
+            <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Status</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Suction Pressure</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Data_OnOff</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Data_OnOff</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Pump Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Pump Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Pump Downtime</Name>
+            <Template>Pump Downtime</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Reason Code</Name>
+            <Template>Reason Code</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Reactor</Name>
+          <Template>Reactor with Outlet Sensor</Template>
+          <AFAttribute>
+            <Name>Outlet Sensor</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Outlet Sensor Target</Name>
+            <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Reactor Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Reactor Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 1\Reactor</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFAnalysis>
+          <Name>Line Status</Name>
+          <Template>Line Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Plant\Line 1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OEE</Name>
+          <Template>OEE</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Plant\Line 1</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Line 2</Name>
+        <Template>Line</Template>
+        <AFAttribute>
+          <Name>Availability</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>End Time</Name>
+          <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>OEE</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Performance</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Production Rate Target</Name>
+          <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Quality</Name>
+          <AFAttributeCategoryRef>OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Start Time</Name>
+          <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Status</Name>
+          <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Inlet Pump</Name>
+          <Template>Pump</Template>
+          <AFAttribute>
+            <Name>Bearing Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow Rate</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>OnOff</Name>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Reason Code</Name>
+            <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Status</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Suction Pressure</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Data_OnOff</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Data_OnOff</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Pump Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Pump Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Pump Downtime</Name>
+            <Template>Pump Downtime</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Reason Code</Name>
+            <Template>Reason Code</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Outlet Pump</Name>
+          <Template>Outlet Pump</Template>
+          <AFAttribute>
+            <Name>Bearing Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow Rate</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>OnOff</Name>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Reason Code</Name>
+            <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Status</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Suction Pressure</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Data_OnOff</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Data_OnOff</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Pump Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Pump Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Pump Downtime</Name>
+            <Template>Pump Downtime</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Reason Code</Name>
+            <Template>Reason Code</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Reactor</Name>
+          <Template>Reactor with Outlet Sensor</Template>
+          <AFAttribute>
+            <Name>Outlet Sensor</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Outlet Sensor Target</Name>
+            <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Reactor Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Reactor Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 2\Reactor</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFAnalysis>
+          <Name>Line Status</Name>
+          <Template>Line Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Plant\Line 2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OEE</Name>
+          <Template>OEE</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Plant\Line 2</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Line 3</Name>
+        <Template>Line without Quality</Template>
+        <AFAttribute>
+          <Name>Availability</Name>
+          <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>End Time</Name>
+          <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>OEE</Name>
+          <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Performance</Name>
+          <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Production Rate Target</Name>
+          <AFAttributeCategoryRef>Targets</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Quality</Name>
+          <AFAttributeCategoryRef>Non-rollup OEE metrics</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Start Time</Name>
+          <AFAttributeCategoryRef>Parameters</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFAttribute>
+          <Name>Status</Name>
+          <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+        </AFAttribute>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Inlet Pump</Name>
+          <Template>Pump</Template>
+          <AFAttribute>
+            <Name>Bearing Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow Rate</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>OnOff</Name>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Reason Code</Name>
+            <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Status</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Suction Pressure</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Data_OnOff</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Data_OnOff</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Pump Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Pump Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Pump Downtime</Name>
+            <Template>Pump Downtime</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Reason Code</Name>
+            <Template>Reason Code</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Inlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Outlet Pump</Name>
+          <Template>Outlet Pump</Template>
+          <AFAttribute>
+            <Name>Bearing Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow Rate</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>OnOff</Name>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Reason Code</Name>
+            <AFAttributeCategoryRef>Analytics</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Serial Number</Name>
+            <AFAttributeCategoryRef>Properties</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Status</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Suction Pressure</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Data_OnOff</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Data_OnOff</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Pump Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Pump Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Pump Downtime</Name>
+            <Template>Pump Downtime</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Reason Code</Name>
+            <Template>Reason Code</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Outlet Pump</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Reactor</Name>
+          <Template>Reactor</Template>
+          <AFAttribute>
+            <Name>Temperature</Name>
+            <AFAttributeCategoryRef>Process Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>OSIDemo_Simulated Reactor Data</Name>
+            <Description />
+            <Template>OSIDemo_Simulated Reactor Data</Template>
+            <Status>Disabled</Status>
+            <Target>
+              <AFElementRef>Plant\Line 3\Reactor</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFAnalysis>
+          <Name>Line Status</Name>
+          <Template>Line Status</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Plant\Line 3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+        <AFAnalysis>
+          <Name>OEE</Name>
+          <Template>OEE</Template>
+          <Status>Disabled</Status>
+          <Target>
+            <AFElementRef>Plant\Line 3</AFElementRef>
+          </Target>
+        </AFAnalysis>
+      </AFElement>
+      <AFAnalysis>
+        <Name>Avg Availability</Name>
+        <Template>Avg Availability</Template>
+        <Status>Disabled</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Avg OEE</Name>
+        <Template>Avg OEE</Template>
+        <Status>Disabled</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Avg Performance</Name>
+        <Template>Avg Performance</Template>
+        <Status>Disabled</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+      <AFAnalysis>
+        <Name>Avg Quality</Name>
+        <Template>Avg Quality</Template>
+        <Status>Disabled</Status>
+        <Target>
+          <AFElementRef>Plant</AFElementRef>
+        </Target>
+      </AFAnalysis>
+    </AFElement>
+  </AFDatabase>
+</AF>

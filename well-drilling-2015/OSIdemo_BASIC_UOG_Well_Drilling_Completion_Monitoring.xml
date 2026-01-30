@@ -1,0 +1,3291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.6.1.6238" ExportMode="NoUniqueID, DefaultValues" PISystem="CSSSQLAF2" Database="UOG_FINAL_BASIC_DrillingAndCompletionMonitoring" Description="" Created="2015-05-15T19:57:42.7153924Z" id="8887e5ff-4d96-472a-810c-65e3654f6d98" ParentKey="b8ac1265-8ab5-42ec-9a30-2735eba9ffe5" ExportedObject="UOG_FINAL_BASIC_DrillingAndCompletionMonitoring" ExportedType="AFDatabase" Identity="Database" PIPersist="180 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{b8ac1265-8ab5-42ec-9a30-2735eba9ffe5}\{8887e5ff-4d96-472a-810c-65e3654f6d98}*CSSSQLAF2\UOG_FINAL_BASIC_DrillingAndCompletionMonitoring">
+  <AFDatabase>
+    <Name>UOG_FINAL_BASIC_DrillingAndCompletionMonitoring</Name>
+    <Description />
+    <AFAnalysisCategory>
+      <Name>DrillingCompletionStages</Name>
+      <Description />
+    </AFAnalysisCategory>
+    <AFAnalysisCategory>
+      <Name>DrillingModes</Name>
+      <Description>Mode of rig duirng the drilling of a well</Description>
+    </AFAnalysisCategory>
+    <AFAttributeCategory>
+      <Name>Asset Information</Name>
+      <Description />
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Calculation</Name>
+      <Description />
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Operational Data</Name>
+      <Description />
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Specification</Name>
+      <Description />
+    </AFAttributeCategory>
+    <AFAttributeCategory>
+      <Name>Well Information</Name>
+      <Description />
+    </AFAttributeCategory>
+    <AFElementCategory>
+      <Name>Drilling Events</Name>
+      <Description />
+    </AFElementCategory>
+    <AFElementCategory>
+      <Name>Drilling Rigs</Name>
+      <Description />
+    </AFElementCategory>
+    <AFElementCategory>
+      <Name>PI Data Archive</Name>
+      <Description />
+    </AFElementCategory>
+    <AFEnumerationSet>
+      <Name>Well States</Name>
+      <Description>Different states of Drilling and Completion</Description>
+      <AFEnumerationValue>
+        <Name>Drilling</Name>
+        <Value>0</Value>
+        <Description>Drilling phase - typically ~20 days</Description>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Completing</Name>
+        <Value>1</Value>
+        <Description>Completion phase - typically ~60 days</Description>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Spud</Name>
+        <Value>2</Value>
+        <Description>State before begin of drilling</Description>
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Complete</Name>
+        <Value>3</Value>
+        <Description>Drilling &amp; Completion ended</Description>
+      </AFEnumerationValue>
+    </AFEnumerationSet>
+    <AFEnumerationSet>
+      <Name>Well Type</Name>
+      <Description />
+      <AFEnumerationValue>
+        <Name>Oil</Name>
+        <Value>0</Value>
+        <Description />
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Gas</Name>
+        <Value>1</Value>
+        <Description />
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Injection - Water</Name>
+        <Value>2</Value>
+        <Description />
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Injection - Steam</Name>
+        <Value>3</Value>
+        <Description />
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Injection - Gas</Name>
+        <Value>4</Value>
+        <Description />
+      </AFEnumerationValue>
+      <AFEnumerationValue>
+        <Name>Disposal</Name>
+        <Value>5</Value>
+        <Description />
+      </AFEnumerationValue>
+    </AFEnumerationSet>
+    <AFReferenceType>
+      <Name>Composition</Name>
+      <ChildName>IsComposedOf</ChildName>
+      <ParentName>ComposedBy</ParentName>
+      <Strength>Composition</Strength>
+      <AllowedParentElementTemplate />
+      <AllowedChildElementTemplate />
+    </AFReferenceType>
+    <AFReferenceType>
+      <Name>Parent-Child</Name>
+      <ChildName>Child</ChildName>
+      <ParentName>Parent</ParentName>
+      <Strength>Strong</Strength>
+      <AllowedParentElementTemplate />
+      <AllowedChildElementTemplate />
+    </AFReferenceType>
+    <AFReferenceType>
+      <Name>Weak Reference</Name>
+      <ChildName>Referenced</ChildName>
+      <ParentName>Referenced by</ParentName>
+      <Strength>Weak</Strength>
+      <AllowedParentElementTemplate />
+      <AllowedChildElementTemplate />
+    </AFReferenceType>
+    <AFElementTemplate>
+      <Name>Completion Stage</Name>
+      <Description />
+      <BaseTemplate />
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern>%Element% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFAttributeTemplate>
+        <Name>Contractor</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>'.\Elements[.]|Manufacturer';</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Rig</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%..\Element%"</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Well Name</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Well Name;TimeRangeMethod=StartTime</ConfigString>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Drilling Stage</Name>
+      <Description />
+      <BaseTemplate />
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern>%Element% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFAttributeTemplate>
+        <Name>Average ROP</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|ROP;TimeRangeMethod=Average</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Average Top Drive RPM</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Top Drive RPM;TimeRangeMethod=Average</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Contractor</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">0</Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>'.\Elements[.]|Manufacturer';</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Rig</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%Element%"</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Well Name</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Well Name;TimeRangeMethod=StartTime</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Well State</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+        <Value />
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Well State;TimeRangeMethod=StartTime</ConfigString>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Equipment</Name>
+      <Description />
+      <BaseTemplate />
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern />
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFAttributeTemplate>
+        <Name>Asset Name</Name>
+        <Description />
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Date of installation</Name>
+        <Description />
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>DateTime</Type>
+        <TypeQualifier />
+        <Value type="DateTime">1970-01-01 00:00:00Z</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Manufacturer</Name>
+        <Description />
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Model</Name>
+        <Description />
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>PI Data Archive</Name>
+      <Description />
+      <BaseTemplate />
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern />
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFElementCategoryRef>PI Data Archive</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Name</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">Enter_Your_PIDataArchive_Name</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Production Area</Name>
+      <Description />
+      <BaseTemplate />
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern />
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">West Texas</Value>
+      </AFExtendedProperty>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Rig</Name>
+      <Description />
+      <BaseTemplate>Equipment</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern />
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">West Texas\Clear Fork\Rig1</Value>
+      </AFExtendedProperty>
+      <AFElementCategoryRef>Drilling Rigs</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>API Well Number</Name>
+        <Description>Well ID - "unique, permanent, numeric identifier" assigned to each well drilled for oil and gas in the United States. Owned by PPDM Association.</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Bit Weight</Name>
+        <Description>Weight on Bit (WOB) -  downward force exerted on the drill bit</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>klb</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Differential Pressure</Name>
+        <Description>Difference between the hydrostatic pressure exerted on the bottom of the hole and the formation pressure.  High dp (&gt;2000) can cause differential sticking.</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>psi</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Drill pipe inside diameter</Name>
+        <Description>Drill pipe inside diameter</Description>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>in</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Drill string volume</Name>
+        <Description>Volume based on current pipe length\measured depth</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>bbl</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>Formula</DataReference>
+        <ConfigString>A=Drill pipe inside diameter;B=Measured Depth;[A^2*B/1029.4]</ConfigString>
+        <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Flow In Rate</Name>
+        <Description>Rate of drilling fluid into well bore.</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>US gal/min</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Hook Load</Name>
+        <Description>Total force pulling down on the hook.</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>klb</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Measured Depth</Name>
+        <Description>MD - total length along bore path from ground to end of wellbore</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>ft</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Mud Specific Gravity</Name>
+        <Description>SG based on mud weight</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>Formula</DataReference>
+        <ConfigString>A=Mud Weight In;[A/8.33]</ConfigString>
+        <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Mud Weight In</Name>
+        <Description>Density of mud or drilling fluid sampled as going into well</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>lb/US gal</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Pump Pressure</Name>
+        <Description>System pressure loss - the sum total of all the pressure losses from the oil well surface equipment, and all drill &amp; pipe components.</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>psi</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>ROP</Name>
+        <Description>Rate of penetration</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>ft/h</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">60</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Top Drive RPM</Name>
+        <Description>RPM of the motor assembly for torquing the drill string</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>RPM</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Total Vertical Depth</Name>
+        <Description>TVD - absolute vertical distance from ground end of wellbore</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM>ft</DefaultUOM>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Well Name</Name>
+        <Description>Name of well being drilled</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Well State</Name>
+        <Description>State of well being drilled by the rig</Description>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+        <Value type="AFEnumerationValue">EnumerationSets[Well States]\Spud</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+        <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+        <AFAttributeTemplate>
+          <Name>Tagname</Name>
+          <Description />
+          <IsConfigurationItem>false</IsConfigurationItem>
+          <IsIndexed>false</IsIndexed>
+          <DefaultUOM />
+          <Type>String</Type>
+          <TypeQualifier />
+          <Value type="String"></Value>
+          <DataReference />
+          <ConfigString />
+        </AFAttributeTemplate>
+      </AFAttributeTemplate>
+      <AFAnalysisTemplate>
+        <Name>Completion Stage</Name>
+        <Description />
+        <GroupID>0</GroupID>
+        <CaseTemplate />
+        <Target>Rig</Target>
+        <AFAnalysisCategoryRef>DrillingCompletionStages</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=8cb9cbc4-d747-45b4-a36c-713257b44649;EFTNAME=Completion Stage</ConfigString>
+          <VariableMapping />
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>StartTrigger := 'Well State' = "Completing";
+EndTrigger := 'Well State' = "Complete";</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>TimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+          <ConfigString />
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Drilling Stage</Name>
+        <Description />
+        <GroupID>0</GroupID>
+        <CaseTemplate />
+        <Target>Rig</Target>
+        <AFAnalysisCategoryRef>DrillingCompletionStages</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=2b0e9bab-2db3-4932-86a6-ac6aa6ce1323;EFTNAME=Drilling Stage</ConfigString>
+          <VariableMapping />
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>StartTrigger := 'Well State' = "Drilling";
+EndTrigger := 'Well State' = "Completing";</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>TimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+          <ConfigString />
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Rotary Drilling</Name>
+        <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+        <GroupID>0</GroupID>
+        <CaseTemplate />
+        <Target>Rig</Target>
+        <AFAnalysisCategoryRef>DrillingModes</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=381dc3c1-1437-494c-a843-e1a785538a8a;EFTNAME=Rotary Drilling</ConfigString>
+          <VariableMapping />
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>DepthChange := (Abs(TagVal('Measured Depth','*')) - Abs(PrevVal('Measured Depth','*-2h')));
+StartTrigger := DepthChange &gt; 0.1  AND 'Top Drive RPM'&gt; 15 AND 'Well State' = "Drilling";
+EndTrigger := (DepthChange &gt; 0.1 AND 'Top Drive RPM'&lt; 15 ) or (DepthChange &lt;= 0.1 AND 'Top Drive RPM' &gt; 15 ) or ('Well State' &lt;&gt; "Drilling");</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>TimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+          <ConfigString />
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Sliding</Name>
+        <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+        <GroupID>0</GroupID>
+        <CaseTemplate />
+        <Target>Rig</Target>
+        <AFAnalysisCategoryRef>DrillingModes</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=9935cfd7-0aa6-4638-bd55-ef73d51307c0;EFTNAME=Sliding</ConfigString>
+          <VariableMapping />
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>DepthChange := (Abs(TagVal('Measured Depth','*')) - Abs(PrevVal('Measured Depth','*-2h')));
+StartTrigger := DepthChange &gt; 0.1 AND 'Top Drive RPM' &lt; 15 AND 'Well State' = "Drilling";
+EndTrigger := DepthChange &lt;= 0.1 or 'Top Drive RPM'&gt; 15 or 'Well State' &lt;&gt; "Drilling";</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>TimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+          <ConfigString />
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+      <AFAnalysisTemplate>
+        <Name>Stick-Slip</Name>
+        <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+        <GroupID>0</GroupID>
+        <CaseTemplate />
+        <Target>Rig</Target>
+        <AFAnalysisCategoryRef>DrillingModes</AFAnalysisCategoryRef>
+        <AFAnalysisRule>
+          <AFPlugIn>EventFrame</AFPlugIn>
+          <ConfigString>EFTGUID=61d8643a-5795-46a0-979c-38027186f409;EFTNAME=Stick-Slip;RCNAME=OSIDEMO Stick-Slip Precursor;RCTIMEVALUE=1200</ConfigString>
+          <VariableMapping />
+          <AFAnalysisRule>
+            <AFPlugIn>PerformanceEquation</AFPlugIn>
+            <ConfigString>DepthChange := (Abs(TagVal('Measured Depth','*')) - Abs(PrevVal('Measured Depth','*-2h')));
+StartTrigger := 'Measured Depth' &gt; 1 AND DepthChange &lt;= 0.1 AND 'Top Drive RPM'&gt; 15  AND 'Well State' = "Drilling";
+EndTrigger := DepthChange &gt; 0.1 or 'Well State' &lt;&gt; "Drilling";</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+          <AFAnalysisRule>
+            <AFPlugIn>TimeTrue</AFPlugIn>
+            <ConfigString>TimeTrueValue=0</ConfigString>
+            <VariableMapping />
+          </AFAnalysisRule>
+        </AFAnalysisRule>
+        <AFTimeRule>
+          <AFPlugIn>Natural</AFPlugIn>
+          <ConfigString />
+        </AFTimeRule>
+      </AFAnalysisTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Rotary Drilling</Name>
+      <Description />
+      <BaseTemplate>Drilling Stage</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern>%Element% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFElementCategoryRef>Drilling Events</AFElementCategoryRef>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Sliding</Name>
+      <Description />
+      <BaseTemplate>Drilling Stage</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern>%Element% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFElementCategoryRef>Drilling Events</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Start Measured Depth</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Measured Depth;TimeRangeMethod=StartTime</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Start Total Vertical Depth</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Total Vertical Depth;TimeRangeMethod=StartTime</ConfigString>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Stick-Slip</Name>
+      <Description />
+      <BaseTemplate>Drilling Stage</BaseTemplate>
+      <Type>None</Type>
+      <InstanceType>EventFrame</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern>%Element% %TEMPLATE% %STARTTIME:yyyy-MM-dd HH:mm:ss.fff%</NamingPattern>
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFElementCategoryRef>Drilling Events</AFElementCategoryRef>
+      <AFAttributeTemplate>
+        <Name>Average Differential Pressure</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Differential Pressure;TimeRangeMethod=Average</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Maximum Differential Pressure</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsIndexed>false</IsIndexed>
+        <DefaultUOM />
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>.\Elements[.]|Differential Pressure;TimeRangeMethod=Maximum</ConfigString>
+      </AFAttributeTemplate>
+    </AFElementTemplate>
+    <AFElementTemplate>
+      <Name>Well Pad</Name>
+      <Description />
+      <BaseTemplate />
+      <Type>None</Type>
+      <InstanceType>Element</InstanceType>
+      <AllowElementToExtend>false</AllowElementToExtend>
+      <DefaultAttribute />
+      <NamingPattern />
+      <DefaultInputPort />
+      <DefaultOutputPort />
+      <DefaultUndirectedPort />
+      <AFExtendedProperty>
+        <Name>Override</Name>
+        <Value type="AFObject">West Texas\Clear Fork</Value>
+      </AFExtendedProperty>
+    </AFElementTemplate>
+    <AFElement>
+      <Name>PI Data Archive</Name>
+      <Description />
+      <Template>PI Data Archive</Template>
+      <Modifier>AFEL\bdeslatte</Modifier>
+      <Comment />
+      <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+      <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+      <AFAttribute>
+        <Name>Name</Name>
+        <Description />
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <DefaultUOM />
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value default="true" type="String">Enter_Your_PIDataArchive_Name</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttribute>
+    </AFElement>
+    <AFElement>
+      <Name>West Texas</Name>
+      <Description />
+      <Template>Production Area</Template>
+      <Modifier>AFEL\bdeslatte</Modifier>
+      <Comment />
+      <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+      <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Clear Fork</Name>
+        <Description />
+        <Template>Well Pad</Template>
+        <Modifier>AFEL\bdeslatte</Modifier>
+        <Comment />
+        <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+        <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Rig1</Name>
+          <Description />
+          <Template>Rig</Template>
+          <Modifier>AFEL\bdeslatte</Modifier>
+          <Comment />
+          <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+          <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+          <AFAttribute>
+            <Name>API Well Number</Name>
+            <Description>Well ID - "unique, permanent, numeric identifier" assigned to each well drilled for oil and gas in the United States. Owned by PPDM Association.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Asset Name</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Bit Weight</Name>
+            <Description>Weight on Bit (WOB) -  downward force exerted on the drill bit</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Date of installation</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>DateTime</Type>
+            <TypeQualifier />
+            <Value default="true" type="DateTime">1970-01-01 00:00:00Z</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Differential Pressure</Name>
+            <Description>Difference between the hydrostatic pressure exerted on the bottom of the hole and the formation pressure.  High dp (&gt;2000) can cause differential sticking.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill pipe inside diameter</Name>
+            <Description>Drill pipe inside diameter</Description>
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM>in</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <Value default="true" type="Double">0</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill string volume</Name>
+            <Description>Volume based on current pipe length\measured depth</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>bbl</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Drill pipe inside diameter;B=Measured Depth;[A^2*B/1029.4]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow In Rate</Name>
+            <Description>Rate of drilling fluid into well bore.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>US gal/min</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Hook Load</Name>
+            <Description>Total force pulling down on the hook.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Measured Depth</Name>
+            <Description>MD - total length along bore path from ground to end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Model</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Specific Gravity</Name>
+            <Description>SG based on mud weight</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Mud Weight In;[A/8.33]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Weight In</Name>
+            <Description>Density of mud or drilling fluid sampled as going into well</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>lb/US gal</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Pump Pressure</Name>
+            <Description>System pressure loss - the sum total of all the pressure losses from the oil well surface equipment, and all drill &amp; pipe components.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>ROP</Name>
+            <Description>Rate of penetration</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft/h</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Top Drive RPM</Name>
+            <Description>RPM of the motor assembly for torquing the drill string</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>RPM</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Total Vertical Depth</Name>
+            <Description>TVD - absolute vertical distance from ground end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well Name</Name>
+            <Description>Name of well being drilled</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well State</Name>
+            <Description>State of well being drilled by the rig</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>AFEnumerationValue</Type>
+            <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>Completion Stage</Name>
+            <Description />
+            <Template>Completion Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Drilling Stage</Name>
+            <Description />
+            <Template>Drilling Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Rotary Drilling</Name>
+            <Description>ALES I REMOVED ROP - NOT NEEDED??.  Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Rotary Drilling</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Sliding</Name>
+            <Description />
+            <Template>Sliding</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Stick-Slip</Name>
+            <Description>ALES WHAT DOES FLOW IN RATE HAVE TO DO WITH </Description>
+            <Template>Stick-Slip</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig1</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Rig2</Name>
+          <Description />
+          <Template>Rig</Template>
+          <Modifier>AFEL\bdeslatte</Modifier>
+          <Comment />
+          <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+          <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+          <AFAttribute>
+            <Name>API Well Number</Name>
+            <Description>Well ID - "unique, permanent, numeric identifier" assigned to each well drilled for oil and gas in the United States. Owned by PPDM Association.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Asset Name</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Bit Weight</Name>
+            <Description>Weight on Bit (WOB) -  downward force exerted on the drill bit</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Date of installation</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>DateTime</Type>
+            <TypeQualifier />
+            <Value default="true" type="DateTime">1970-01-01 00:00:00Z</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Differential Pressure</Name>
+            <Description>Difference between the hydrostatic pressure exerted on the bottom of the hole and the formation pressure.  High dp (&gt;2000) can cause differential sticking.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill pipe inside diameter</Name>
+            <Description>Drill pipe inside diameter</Description>
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM>in</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <Value default="true" type="Double">0</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill string volume</Name>
+            <Description>Volume based on current pipe length\measured depth</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>bbl</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Drill pipe inside diameter;B=Measured Depth;[A^2*B/1029.4]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow In Rate</Name>
+            <Description>Rate of drilling fluid into well bore.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>US gal/min</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Hook Load</Name>
+            <Description>Total force pulling down on the hook.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Measured Depth</Name>
+            <Description>MD - total length along bore path from ground to end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Model</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Specific Gravity</Name>
+            <Description>SG based on mud weight</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Mud Weight In;[A/8.33]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Weight In</Name>
+            <Description>Density of mud or drilling fluid sampled as going into well</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>lb/US gal</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Pump Pressure</Name>
+            <Description>System pressure loss - the sum total of all the pressure losses from the oil well surface equipment, and all drill &amp; pipe components.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>ROP</Name>
+            <Description>Rate of penetration</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft/h</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Top Drive RPM</Name>
+            <Description>RPM of the motor assembly for torquing the drill string</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>RPM</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Total Vertical Depth</Name>
+            <Description>TVD - absolute vertical distance from ground end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well Name</Name>
+            <Description>Name of well being drilled</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well State</Name>
+            <Description>State of well being drilled by the rig</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>AFEnumerationValue</Type>
+            <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>Completion Stage</Name>
+            <Description />
+            <Template>Completion Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig2</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Drilling Stage</Name>
+            <Description />
+            <Template>Drilling Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig2</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Rotary Drilling</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Rotary Drilling</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig2</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Sliding</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Sliding</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig2</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Stick-Slip</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Stick-Slip</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig2</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Rig3</Name>
+          <Description />
+          <Template>Rig</Template>
+          <Modifier>AFEL\bdeslatte</Modifier>
+          <Comment />
+          <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+          <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+          <AFAttribute>
+            <Name>API Well Number</Name>
+            <Description>Well ID - "unique, permanent, numeric identifier" assigned to each well drilled for oil and gas in the United States. Owned by PPDM Association.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Asset Name</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Bit Weight</Name>
+            <Description>Weight on Bit (WOB) -  downward force exerted on the drill bit</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Date of installation</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>DateTime</Type>
+            <TypeQualifier />
+            <Value default="true" type="DateTime">1970-01-01 00:00:00Z</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Differential Pressure</Name>
+            <Description>Difference between the hydrostatic pressure exerted on the bottom of the hole and the formation pressure.  High dp (&gt;2000) can cause differential sticking.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill pipe inside diameter</Name>
+            <Description>Drill pipe inside diameter</Description>
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM>in</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <Value default="true" type="Double">0</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill string volume</Name>
+            <Description>Volume based on current pipe length\measured depth</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>bbl</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Drill pipe inside diameter;B=Measured Depth;[A^2*B/1029.4]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow In Rate</Name>
+            <Description>Rate of drilling fluid into well bore.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>US gal/min</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Hook Load</Name>
+            <Description>Total force pulling down on the hook.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Measured Depth</Name>
+            <Description>MD - total length along bore path from ground to end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Model</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Specific Gravity</Name>
+            <Description>SG based on mud weight</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Mud Weight In;[A/8.33]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Weight In</Name>
+            <Description>Density of mud or drilling fluid sampled as going into well</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>lb/US gal</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Pump Pressure</Name>
+            <Description>System pressure loss - the sum total of all the pressure losses from the oil well surface equipment, and all drill &amp; pipe components.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>ROP</Name>
+            <Description>Rate of penetration</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft/h</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Top Drive RPM</Name>
+            <Description>RPM of the motor assembly for torquing the drill string</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>RPM</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Total Vertical Depth</Name>
+            <Description>TVD - absolute vertical distance from ground end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well Name</Name>
+            <Description>Name of well being drilled</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well State</Name>
+            <Description>State of well being drilled by the rig</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>AFEnumerationValue</Type>
+            <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>Completion Stage</Name>
+            <Description />
+            <Template>Completion Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig3</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Drilling Stage</Name>
+            <Description />
+            <Template>Drilling Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig3</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Rotary Drilling</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Rotary Drilling</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig3</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Sliding</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Sliding</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig3</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Stick-Slip</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Stick-Slip</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig3</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Rig7</Name>
+          <Description />
+          <Template>Rig</Template>
+          <Modifier>AFEL\bdeslatte</Modifier>
+          <Comment />
+          <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+          <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+          <AFAttribute>
+            <Name>API Well Number</Name>
+            <Description>Well ID - "unique, permanent, numeric identifier" assigned to each well drilled for oil and gas in the United States. Owned by PPDM Association.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Asset Name</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Bit Weight</Name>
+            <Description>Weight on Bit (WOB) -  downward force exerted on the drill bit</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Date of installation</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>DateTime</Type>
+            <TypeQualifier />
+            <Value default="true" type="DateTime">1970-01-01 00:00:00Z</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Differential Pressure</Name>
+            <Description>Difference between the hydrostatic pressure exerted on the bottom of the hole and the formation pressure.  High dp (&gt;2000) can cause differential sticking.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill pipe inside diameter</Name>
+            <Description>Drill pipe inside diameter</Description>
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM>in</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <Value default="true" type="Double">0</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill string volume</Name>
+            <Description>Volume based on current pipe length\measured depth</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>bbl</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Drill pipe inside diameter;B=Measured Depth;[A^2*B/1029.4]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow In Rate</Name>
+            <Description>Rate of drilling fluid into well bore.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>US gal/min</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Hook Load</Name>
+            <Description>Total force pulling down on the hook.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Measured Depth</Name>
+            <Description>MD - total length along bore path from ground to end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Model</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Specific Gravity</Name>
+            <Description>SG based on mud weight</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Mud Weight In;[A/8.33]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Weight In</Name>
+            <Description>Density of mud or drilling fluid sampled as going into well</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>lb/US gal</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Pump Pressure</Name>
+            <Description>System pressure loss - the sum total of all the pressure losses from the oil well surface equipment, and all drill &amp; pipe components.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>ROP</Name>
+            <Description>Rate of penetration</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft/h</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Top Drive RPM</Name>
+            <Description>RPM of the motor assembly for torquing the drill string</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>RPM</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Total Vertical Depth</Name>
+            <Description>TVD - absolute vertical distance from ground end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well Name</Name>
+            <Description>Name of well being drilled</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well State</Name>
+            <Description>State of well being drilled by the rig</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>AFEnumerationValue</Type>
+            <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>Completion Stage</Name>
+            <Description />
+            <Template>Completion Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig7</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Drilling Stage</Name>
+            <Description />
+            <Template>Drilling Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig7</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Rotary Drilling</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Rotary Drilling</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig7</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Sliding</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Sliding</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig7</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Stick-Slip</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Stick-Slip</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Clear Fork\Rig7</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+      </AFElement>
+      <AFElement ReferenceType="Parent-Child">
+        <Name>Odessa</Name>
+        <Description />
+        <Template>Well Pad</Template>
+        <Modifier>AFEL\bdeslatte</Modifier>
+        <Comment />
+        <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+        <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+        <AFElement ReferenceType="Parent-Child">
+          <Name>Rig18</Name>
+          <Description />
+          <Template>Rig</Template>
+          <Modifier>AFEL\bdeslatte</Modifier>
+          <Comment />
+          <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+          <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+          <AFAttribute>
+            <Name>API Well Number</Name>
+            <Description>Well ID - "unique, permanent, numeric identifier" assigned to each well drilled for oil and gas in the United States. Owned by PPDM Association.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Asset Name</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Bit Weight</Name>
+            <Description>Weight on Bit (WOB) -  downward force exerted on the drill bit</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Date of installation</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>DateTime</Type>
+            <TypeQualifier />
+            <Value default="true" type="DateTime">1970-01-01 00:00:00Z</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Differential Pressure</Name>
+            <Description>Difference between the hydrostatic pressure exerted on the bottom of the hole and the formation pressure.  High dp (&gt;2000) can cause differential sticking.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill pipe inside diameter</Name>
+            <Description>Drill pipe inside diameter</Description>
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM>in</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <Value default="true" type="Double">0</Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Specification</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Drill string volume</Name>
+            <Description>Volume based on current pipe length\measured depth</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>bbl</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Drill pipe inside diameter;B=Measured Depth;[A^2*B/1029.4]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Flow In Rate</Name>
+            <Description>Rate of drilling fluid into well bore.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>US gal/min</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Hook Load</Name>
+            <Description>Total force pulling down on the hook.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>klb</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Manufacturer</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Measured Depth</Name>
+            <Description>MD - total length along bore path from ground to end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Model</Name>
+            <Description />
+            <IsConfigurationItem>true</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <Value default="true" type="String"></Value>
+            <DataReference />
+            <ConfigString />
+            <AFAttributeCategoryRef>Asset Information</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Specific Gravity</Name>
+            <Description>SG based on mud weight</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>Formula</DataReference>
+            <ConfigString>A=Mud Weight In;[A/8.33]</ConfigString>
+            <AFAttributeCategoryRef>Calculation</AFAttributeCategoryRef>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Mud Weight In</Name>
+            <Description>Density of mud or drilling fluid sampled as going into well</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>lb/US gal</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Pump Pressure</Name>
+            <Description>System pressure loss - the sum total of all the pressure losses from the oil well surface equipment, and all drill &amp; pipe components.</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>psi</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>ROP</Name>
+            <Description>Rate of penetration</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft/h</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Top Drive RPM</Name>
+            <Description>RPM of the motor assembly for torquing the drill string</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>RPM</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Total Vertical Depth</Name>
+            <Description>TVD - absolute vertical distance from ground end of wellbore</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM>ft</DefaultUOM>
+            <Type>Double</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Operational Data</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well Name</Name>
+            <Description>Name of well being drilled</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>String</Type>
+            <TypeQualifier />
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAttribute>
+            <Name>Well State</Name>
+            <Description>State of well being drilled by the rig</Description>
+            <IsConfigurationItem>false</IsConfigurationItem>
+            <DefaultUOM />
+            <Type>AFEnumerationValue</Type>
+            <TypeQualifier type="AFObject">EnumerationSets[Well States]</TypeQualifier>
+            <DataReference>PI Point</DataReference>
+            <ConfigString>\\%@\PI Data Archive|Name%\%@.|TagName%</ConfigString>
+            <AFAttributeCategoryRef>Well Information</AFAttributeCategoryRef>
+            <AFAttribute>
+              <Name>Tagname</Name>
+              <Description />
+              <IsConfigurationItem>false</IsConfigurationItem>
+              <DefaultUOM />
+              <Type>String</Type>
+              <TypeQualifier />
+              <Value default="true" type="String"></Value>
+              <DataReference />
+              <ConfigString />
+            </AFAttribute>
+          </AFAttribute>
+          <AFAnalysis>
+            <Name>Completion Stage</Name>
+            <Description />
+            <Template>Completion Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Odessa\Rig18</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Drilling Stage</Name>
+            <Description />
+            <Template>Drilling Stage</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Odessa\Rig18</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Rotary Drilling</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Rotary Drilling</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Odessa\Rig18</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Sliding</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Sliding</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Odessa\Rig18</AFElementRef>
+            </Target>
+          </AFAnalysis>
+          <AFAnalysis>
+            <Name>Stick-Slip</Name>
+            <Description>Trigger could be ROP instead of calculated DepthChange</Description>
+            <Template>Stick-Slip</Template>
+            <CaseTemplate />
+            <Status>Disabled</Status>
+            <PublishResults>false</PublishResults>
+            <Priority>High</Priority>
+            <MaxQueueSize>0</MaxQueueSize>
+            <GroupID>0</GroupID>
+            <Target>
+              <AFElementRef>West Texas\Odessa\Rig18</AFElementRef>
+            </Target>
+          </AFAnalysis>
+        </AFElement>
+      </AFElement>
+    </AFElement>
+  </AFDatabase>
+</AF>

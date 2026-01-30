@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.9.0.8065" ExportMode="AllReferences, NoUniqueID, DefaultValues" PISystem="WILSON-PICC" Created="2017-06-26T16:29:54.6361301Z" ExportedObject="NamedCollectionList" ExportedType="AFNamedCollectionList`1" Identity="UOMClass">
+  <UOMClass>
+    <Name>Accelaration</Name>
+    <Description />
+    <CanonicalUOM>milimeter per second square</CanonicalUOM>
+    <CanonicalAbbr>mm/s^2</CanonicalAbbr>
+  </UOMClass>
+  <UOMClass>
+    <Name>Energy Price</Name>
+    <Description />
+    <CanonicalUOM>dollar per unit kilowatt hour</CanonicalUOM>
+    <CanonicalAbbr>$/kWh</CanonicalAbbr>
+  </UOMClass>
+  <UOMClass>
+    <Name>Pressure Head in Water Meter</Name>
+    <Description />
+    <CanonicalUOM>Water Column Pressure</CanonicalUOM>
+    <CanonicalAbbr>meter H2O</CanonicalAbbr>
+  </UOMClass>
+  <UOMClass>
+    <Name>Pump Energy Index</Name>
+    <Description />
+    <CanonicalUOM>Enrgy per unit flow per unit head</CanonicalUOM>
+    <CanonicalAbbr>kWh/L/m</CanonicalAbbr>
+  </UOMClass>
+  <UOMClass>
+    <Name>Specific Power</Name>
+    <Description />
+    <CanonicalUOM>kilowatt per unit litre</CanonicalUOM>
+    <CanonicalAbbr>kW/L</CanonicalAbbr>
+  </UOMClass>
+  <UOM>
+    <Name>milimeter per second square</Name>
+    <Abbreviation>mm/s^2</Abbreviation>
+    <Description />
+    <RefFactor>1</RefFactor>
+    <RefOffset>0</RefOffset>
+    <Class>Accelaration</Class>
+  </UOM>
+  <UOM>
+    <Name>dollar per unit kilowatt hour</Name>
+    <Abbreviation>$/kWh</Abbreviation>
+    <Description />
+    <RefFactor>1</RefFactor>
+    <RefOffset>0</RefOffset>
+    <Class>Energy Price</Class>
+  </UOM>
+  <UOM>
+    <Name>Water Column Pressure</Name>
+    <Abbreviation>meter H2O</Abbreviation>
+    <Description />
+    <RefFactor>1</RefFactor>
+    <RefOffset>0</RefOffset>
+    <Class>Pressure Head in Water Meter</Class>
+  </UOM>
+  <UOM>
+    <Name>Enrgy per unit flow per unit head</Name>
+    <Abbreviation>kWh/L/m</Abbreviation>
+    <Description />
+    <RefFactor>1</RefFactor>
+    <RefOffset>0</RefOffset>
+    <Class>Pump Energy Index</Class>
+  </UOM>
+  <UOM>
+    <Name>kilowatt per unit litre</Name>
+    <Abbreviation>kW/L</Abbreviation>
+    <Description />
+    <RefFactor>1</RefFactor>
+    <RefOffset>0</RefOffset>
+    <Class>Specific Power</Class>
+  </UOM>
+</AF>
